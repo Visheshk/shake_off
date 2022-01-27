@@ -6,7 +6,7 @@ input.onButtonPressed(Button.AB, function () {
     basic.showNumber(3)
     basic.showNumber(2)
     basic.showNumber(1)
-    basic.showString("Shake")
+    basic.showString("Go")
     for (let value of list) {
         basic.showNumber(value)
     }
@@ -31,7 +31,7 @@ list = [
 1,
 0
 ]
-basic.showString("Press A+B to start")
+basic.showString("A+B to start")
 basic.forever(function () {
 	
 })
