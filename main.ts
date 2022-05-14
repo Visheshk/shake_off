@@ -1,28 +1,24 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(score)
-})
-input.onButtonPressed(Button.AB, function () {
-    index = 3
-    countdown_timer(2)
-    basic.showString("Go")
-    score = 0
-    countdown_timer(9)
-    basic.showNumber(score)
+    basic.showNumber(finish - start)
 })
 input.onGesture(Gesture.Shake, function () {
     score += 1
-})
-function countdown_timer (num: number) {
-    countdown = num
-    while (countdown >= 0) {
-        basic.showNumber(countdown)
-        basic.pause(500)
-        countdown += -1
+    if (score == 10) {
+        finish = control.millis()
+        soundExpression.giggle.playUntilDone()
     }
-    basic.clearScreen()
-}
-let countdown = 0
-let index = 0
+})
+let start = 0
+let finish = 0
 let score = 0
 score = 0
-basic.showString("A+B to start")
+finish = 0
+basic.showNumber(3)
+basic.pause(1000)
+basic.showNumber(2)
+basic.pause(1000)
+basic.showNumber(1)
+basic.pause(1000)
+basic.showString("Go")
+score = 0
+start = control.millis()
