@@ -12,13 +12,12 @@ input.onGesture(Gesture.Shake, function () {
     max_shakes
     )
 })
-let start = 0
 let max_shakes = 0
 let finish = 0
+let start = 0
 let score = 0
-score = 0
-finish = 0
-max_shakes = 40
 basic.showString("shake")
 score = 0
 start = control.millis()
+finish = 0
+max_shakes = 40
